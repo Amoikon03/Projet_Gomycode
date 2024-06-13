@@ -9,7 +9,7 @@ st.title("Exploration Des Données")
 # Charger le fichier CSV
 @st.cache_data
 def load_data():
-    return pd.read_csv("Incidence.csv")
+    return pd.read_csv("Projet_Gomycode/Incidence.csv")
 
 df = load_data()
 
