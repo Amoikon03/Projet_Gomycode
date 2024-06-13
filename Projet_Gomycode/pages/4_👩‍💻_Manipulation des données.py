@@ -75,7 +75,7 @@ def traiter_valeurs_manquantes(df):
 def enregistrer_donnees_pretraitees(df):
     df.to_pickle("Projet_Gomycode/Incidence_Maladie.pkl")
     # Charger une image depuis votre système de fichiers
-    image_path = "paludisme c mycteria.jpg"
+    image_path = "Projet_Gomycode/paludisme c mycteria.jpg"
 
     # Afficher l'image en arrière-plan
     # Redimensionner et afficher l'image en arrière-plan
