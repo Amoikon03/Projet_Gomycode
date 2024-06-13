@@ -73,7 +73,7 @@ def traiter_valeurs_manquantes(df):
     st.write("### **8 - Information**")
 
 def enregistrer_donnees_pretraitees(df):
-    df.to_pickle("Incidence_Maladie.pkl")
+    df.to_pickle("Projet_Gomycode/Incidence_Maladie.pkl")
     # Charger une image depuis votre système de fichiers
     image_path = "paludisme c mycteria.jpg"
 
