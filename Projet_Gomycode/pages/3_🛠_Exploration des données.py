@@ -14,24 +14,24 @@ def load_data():
 df = load_data()
 
 # Afficher la forme du DataFrame (nombre de lignes et de colonnes)
-st.write("## **Dimensions du DataFrame :** ")
+st.write("### **Dimensions du DataFrame**")
 st.write(f"Le DataFrame a une quantité de lignes égal à : {df.shape[0]}")
 st.write(f"Le DataFrame a une quantité de colonnes égal à : {df.shape[1]}")
 
 # Afficher les premières lignes du DataFrame
-st.write("## **Les premières entrées du DataFrame :** ")
+st.write("### **Les premières entrées du DataFrame**")
 st.write(df.head())
 
 # Afficher les informations sur les (type de données, valeurs manquantes, etc.)
 st.write(df.info())
 
 # Vérification des valeurs manquantes
-st.write("### **Nombre de valeurs manquantes par colonne :**")
+st.write("### **Nombre de valeurs manquantes par colonne**")
 missing_values = df.isnull().sum()
 st.write(missing_values[missing_values > 0])
 
 # Vérification des valeurs aberrantes
-st.write("### **Les valeurs anormales dans la colonne :**")
+st.write("### **Les valeurs anormales dans la colonne**")
 for column in df.select_dtypes(include=['int64', 'float64']).columns:
     outliers = df[column][((df[column] - df[column].mean()) / df[column].std()).abs() > 3]
     if not outliers.empty:
@@ -39,7 +39,7 @@ for column in df.select_dtypes(include=['int64', 'float64']).columns:
         st.write(outliers)
 
 # Afficher les statistiques descriptives pour les colonnes numériques
-st.write("### **Statistiques descriptives pour les variables numériques :**")
+st.write("### **Statistiques descriptives pour les variables numériques**")
 st.write(df.describe())
 
 # Lien vers les autres pages ou sections
